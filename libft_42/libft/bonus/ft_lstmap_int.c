@@ -6,13 +6,13 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 03:12:04 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/09/05 18:31:02 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/09/05 19:07:39 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack	*ft_lstmap_int(t_stack *lst, int(*f)(int), void (*del)(int))
+t_stack	*ft_lstmap_int(t_stack *lst, int (*f)(int), void (*del)(int))
 {
 	t_stack	*head;
 	t_stack	*new_lst_aux;

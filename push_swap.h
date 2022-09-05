@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 15:04:16 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/09/05 18:30:20 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/09/05 19:15:51 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define PUSH_SWAP_H
 
 # include "libft_42/printf/ft_printf.h"
+
+# define MINIMUM -2147483648
 
 typedef struct s_stack
 {
@@ -27,7 +29,7 @@ void	ft_lstclear_int(t_stack **lst, void (*del)(int));
 void	ft_lstdelone_int(t_stack *lst, void (*del)(int));
 void	ft_lstiter_int(t_stack *lst, void (*f)(int));
 t_stack	*ft_lstlast_int(t_stack *lst);
-t_stack	*ft_lstmap_int(t_stack *lst, int(*f)(int), void (*del)(int));
+t_stack	*ft_lstmap_int(t_stack *lst, int (*f)(int), void (*del)(int));
 t_stack	*ft_lstnew_int(int content);
 int		ft_lstsize_int(t_stack *lst);
 

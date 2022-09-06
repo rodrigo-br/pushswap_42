@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 15:04:16 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/09/05 19:15:51 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/09/06 15:24:12 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,15 @@ typedef struct s_stack
 	struct s_stack	*next;
 }	t_stack;
 
-void	ft_lstadd_back_int(t_stack **lst, t_stack *new);
-void	ft_lstadd_front_int(t_stack **lst, t_stack *new);
-void	ft_lstclear_int(t_stack **lst, void (*del)(int));
-void	ft_lstdelone_int(t_stack *lst, void (*del)(int));
-void	ft_lstiter_int(t_stack *lst, void (*f)(int));
-t_stack	*ft_lstlast_int(t_stack *lst);
-t_stack	*ft_lstmap_int(t_stack *lst, int (*f)(int), void (*del)(int));
-t_stack	*ft_lstnew_int(int content);
-int		ft_lstsize_int(t_stack *lst);
+void			ft_lstadd_back_int(t_stack **lst, t_stack *new);
+void			ft_lstadd_front_int(t_stack **lst, t_stack *new);
+void			ft_lstclear_int(t_stack **lst, void (*del)(int));
+void			ft_lstdelone_int(t_stack *lst, void (*del)(int));
+void			ft_lstiter_int(t_stack *lst, void (*f)(int));
+t_stack			*ft_lstlast_int(t_stack *lst);
+t_stack			*ft_lstmap_int(t_stack *lst, int (*f)(int), void (*del)(int));
+t_stack			*ft_lstnew_int(int content);
+int				ft_lstsize_int(t_stack *lst);
+long long int	ft_atolli(const char *nptr);
 
 #endif

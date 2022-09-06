@@ -1,4 +1,4 @@
-SRCS	=	main.c \
+SRCS	=	main.c ft_atolli.c\
 			libft_42/libft/bonus/ft_lstadd_back_int.c \
 			libft_42/libft/bonus/ft_lstadd_front_int.c \
 			libft_42/libft/bonus/ft_lstclear_int.c \
@@ -8,7 +8,7 @@ SRCS	=	main.c \
 			libft_42/libft/bonus/ft_lstlast_int.c \
 			libft_42/libft/bonus/ft_lstmap_int.c \
 			libft_42/libft/bonus/ft_lstnew_int.c \
-			libft_42/libft/bonus/ft_lstsize_int.c
+			libft_42/libft/bonus/ft_lstsize_int.c \
 
 OBJS	=	${SRCS:.c=.o}
 

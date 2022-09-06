@@ -1,4 +1,4 @@
-SRCS	=	main.c ft_atolli.c\
+SRCS	=	main.c ft_atolli.c ft_n_in.c \
 			libft_42/libft/bonus/ft_lstadd_back_int.c \
 			libft_42/libft/bonus/ft_lstadd_front_int.c \
 			libft_42/libft/bonus/ft_lstclear_int.c \

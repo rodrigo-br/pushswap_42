@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 15:04:16 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/09/06 15:24:12 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/09/06 17:38:17 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,12 @@
 # include "libft_42/printf/ft_printf.h"
 
 # define MINIMUM -2147483648
+# define MAXIMUM 2147483647
 
 typedef struct s_stack
 {
 	int				content;
+	int				index;
 	struct s_stack	*next;
 }	t_stack;
 

@@ -27,7 +27,7 @@ $(NAME):	${OBJS} ${H_SRC}
 			make -C ./libft_42
 			mv ./libft_42/libft.a ./$(NAME)
 			ar -rcs $@ $^
-			cc main.c push_swap.a -o push_swap
+			cc -g3 main.c push_swap.a -o push_swap
 
 all: 		${NAME}
 

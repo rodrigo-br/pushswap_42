@@ -55,10 +55,7 @@ int	check_argv_error(char **argv)
 			if ((*argv)[i] == '-' || (*argv)[i] == '+')
 				i++;
 			if (!ft_isdigit((*argv)[i]))
-			{
-				ft_putstr_fd("Use only integer values as argumments", 2);
 				return (-1);
-			}
 			i++;
 		}
 		argv++;
@@ -68,13 +65,20 @@ int	check_argv_error(char **argv)
 
 int	main(int argc, char **argv)
 {
-	t_stack	*head;
+	t_stack	*stack_a;
+	t_stack *stack_b;
+	int		elements;
 
-	head = NULL;
-	(void)argc;
-	if (check_argv_error(argv))
+	stack_a = NULL;
+	stack_b = NULL;
+	elements = argc - 1;
+	if (argc == 1 || check_argv_error(argv))
+	{
+		ft_putstr_fd("Invalid number/type of args", 2);
 		return (-1);
-	fill_stack_a(&head, argv + 1);
-	if (is_sorted(head))
+	}
+	fill_stack_a(&stack_a, argv + 1);
+	if (is_sorted(stack_a))
 		return (0);
+	//sort_numbers(stack_a, stack_b);
 }

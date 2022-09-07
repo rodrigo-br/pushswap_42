@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 13:54:24 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/09/07 20:44:21 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/09/08 00:46:10 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int	validate_errors(int elements, char **argv)
 		return (-1);
 	if (check_argv_error(argv) || test_duplicated(argv))
 	{
-		ft_putstr_fd("Error", 2);
+		ft_putstr_fd("Error\n", 2);
 		return (-1);
 	}
 	return (0);

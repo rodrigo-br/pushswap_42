@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 14:06:43 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/09/07 20:18:30 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/09/07 21:15:18 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ void	handle_many_elements(t_stack **a, t_stack **b)
 	max_bits = 0;
 	while ((size >> max_bits))
 		max_bits++;
-	while (max_bits--)
+	while (i < max_bits)
 	{
 		j = 0;
 		while (j < size)

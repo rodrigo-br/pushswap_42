@@ -6,29 +6,11 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 15:05:09 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/09/07 20:40:43 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/09/08 00:46:37 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	print_stack(t_stack *stack)
-{
-	while (stack)
-	{
-		ft_printf("%d\n", stack->content);
-		stack = stack->next;
-	}
-}
-
-void	print_index(t_stack *stack)
-{
-	while (stack)
-	{
-		ft_printf("%d\n", stack->index);
-		stack = stack->next;
-	}
-}
 
 void	fill_stack_a(t_stack **head, char **argv)
 {
@@ -46,8 +28,11 @@ void	free_all(t_stack **a, t_stack **b)
 	t_stack	*aux_lst;
 	t_stack	*aux_free;
 
-	free(*b);
-	*b = NULL;
+	if (*b)
+	{
+		free(*b);
+		*b = NULL;
+	}
 	if (*a == NULL)
 		return ;
 	aux_lst = *a;
@@ -73,7 +58,10 @@ int	main(int argc, char **argv)
 		return (0);
 	fill_stack_a(&stack_a, argv + 1);
 	if (is_sorted(stack_a))
+	{
+		free_all(&stack_a, &stack_b);
 		return (0);
+	}
 	simplifying_numbers(&stack_a, elements);
 	sort_numbers(&stack_a, &stack_b, elements);
 	free_all(&stack_a, &stack_b);

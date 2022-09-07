@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 14:08:20 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/09/07 14:09:13 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/09/07 14:56:03 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,4 +95,7 @@ void	simplifying_numbers(t_stack **stack, int elements)
 		i++;
 		aux = aux->next;
 	}
+	free(copy);
+	free(copy_sorted);
+	free(copy_simplified);
 }

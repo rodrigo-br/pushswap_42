@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 13:48:28 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/09/07 13:48:37 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/09/07 14:36:12 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	reverse_rotate_a(t_stack **a)
 {
 	t_stack	*aux;
 	t_stack	*temp_last;
-	
+
 	aux = *a;
 	temp_last = ft_lstlast_int(*a);
 	while (aux->next->next)

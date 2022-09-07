@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 15:05:09 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/09/07 14:31:44 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/09/07 14:57:57 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,25 @@ void	fill_stack_a(t_stack **head, char **argv)
 	}
 }
 
+void	free_all(t_stack **a, t_stack **b)
+{
+	t_stack	*aux_lst;
+	t_stack	*aux_free;
+
+	free(*b);
+	*b = NULL;
+	if (*a == NULL)
+		return ;
+	aux_lst = *a;
+	while (aux_lst)
+	{
+		aux_free = aux_lst->next;
+		free(aux_lst);
+		aux_lst = aux_free;
+	}
+	*a = NULL;
+}
+
 int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
@@ -53,5 +72,6 @@ int	main(int argc, char **argv)
 	simplifying_numbers(&stack_a, elements);
 	sort_numbers(&stack_a, &stack_b, elements);
 	print_stack(stack_a);
+	free_all(&stack_a, &stack_b);
 	return (0);
 }

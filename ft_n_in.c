@@ -6,22 +6,22 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 20:51:08 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/09/06 20:53:32 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/09/07 14:38:26 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int ft_n_in(int n, int *array, int n_membs)
+int	ft_n_in(int n, int *array, int n_membs)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (i < n_membs)
-    {
-        if (n == array[i])
-            return (-1);
-        i++;
-    }
-    return (0);
+	i = 0;
+	while (i < n_membs)
+	{
+		if (n == array[i])
+			return (-1);
+		i++;
+	}
+	return (0);
 }

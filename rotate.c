@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 13:48:28 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/09/07 14:36:12 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/09/07 16:24:05 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ void	rotate_a(t_stack **a)
 	aux = *a;
 	ft_lstadd_back_int(&aux, ft_lstnew_int(aux->content, aux->index));
 	*a = (*a)->next;
+	free(aux);
 	ft_printf("ra\n");
 }

@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 15:05:09 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/09/07 14:57:57 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/09/07 20:12:26 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,15 @@ void	print_stack(t_stack *stack)
 	while (stack)
 	{
 		ft_printf("%d\n", stack->content);
+		stack = stack->next;
+	}
+}
+
+void	print_index(t_stack *stack)
+{
+	while (stack)
+	{
+		ft_printf("%d\n", stack->index);
 		stack = stack->next;
 	}
 }
@@ -71,7 +80,6 @@ int	main(int argc, char **argv)
 		return (0);
 	simplifying_numbers(&stack_a, elements);
 	sort_numbers(&stack_a, &stack_b, elements);
-	print_stack(stack_a);
 	free_all(&stack_a, &stack_b);
 	return (0);
 }

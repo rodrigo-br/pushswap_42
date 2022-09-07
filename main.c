@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 15:05:09 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/09/07 20:12:26 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/09/07 20:40:43 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,12 +69,8 @@ int	main(int argc, char **argv)
 	stack_a = NULL;
 	stack_b = NULL;
 	elements = argc - 1;
-	if (elements == 0 || check_argv_error(argv + 1))
-	{
-		ft_putstr_fd("Invalid number/type of args", 2);
-		return (-1);
-	}
-	test_duplicated(argv + 1);
+	if (validate_errors(elements, argv + 1))
+		return (0);
 	fill_stack_a(&stack_a, argv + 1);
 	if (is_sorted(stack_a))
 		return (0);

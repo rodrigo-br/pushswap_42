@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 15:04:16 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/09/07 14:27:41 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/09/07 20:42:56 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,7 @@ void			rotate_a(t_stack **a);
 void			swap(t_stack **stack, char id);
 
 // Validators
-int				check_argv_error(char **argv);
-void			test_duplicated(char **argv);
+int				validate_errors(int elements, char **argv);
 int				is_sorted(t_stack *head);
 
 // Simplifier
@@ -56,9 +55,6 @@ void			simplifying_numbers(t_stack **stack, int elements);
 
 // Sort caller
 void			sort_numbers(t_stack **a, t_stack **b, int n);
-
-// Errors
-void			exit_error_duplicated(void);
 
 // Mappers
 int				map_lowest_index(t_stack *a);

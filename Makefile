@@ -9,7 +9,7 @@ SRCS	=	main.c ft_atolli.c ft_n_in.c validators.c \
 			libft_42/libft/bonus/ft_lstmap_int.c \
 			libft_42/libft/bonus/ft_lstnew_int.c \
 			libft_42/libft/bonus/ft_lstsize_int.c \
-			push.c rotate.c sort.c errors.c swap.c\
+			push.c rotate.c sort.c swap.c\
 			ft_str_is_equal.c simplifier.c mappers.c \
 
 
